@@ -1,0 +1,43 @@
+site_name: FHIR Implementation Guide Accessibility Remediation
+site_description: Section 508 and WCAG remediation report for generated FHIR Implementation Guide publications
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.suggest
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/accessibility.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Start Here: index.md
+  - Quick Reference: 01-quick-reference.md
+  - Color and Contrast:
+      - Evaluation Method: 02-color-contrast-method.md
+      - Profile-Table Links: details/COLOR-001-table-links.md
+      - Muted Text and Opacity: details/COLOR-002-muted-text-opacity.md
+      - Must Support and Status Colors: details/COLOR-003-must-support-colors.md
+  - Structure and Navigation:
+      - Skip Navigation and Main Content: details/STRUCT-001-skip-navigation.md
+      - Page Heading Hierarchy: details/HEAD-001-heading-hierarchy.md
+  - Images:
+      - Generated Image Alternatives: details/IMG-001-image-alternatives.md
+  - Keyboard Operation:
+      - Generated Table Controls: details/KBD-001-table-controls.md
+  - Testing and Acceptance: 03-testing-and-acceptance.md
+
