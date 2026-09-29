@@ -33,6 +33,15 @@ python -m pip install -r requirements.txt
 mkdocs serve
 ```
 
+OR Preview locally using an isolated environment
+Run these commands from the project directory in PowerShell:
+```shell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m mkdocs serve
+```
+
 Open the address printed by MkDocs, normally `http://127.0.0.1:8000/`.
 
 ## Important status note
