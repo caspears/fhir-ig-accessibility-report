@@ -46,7 +46,7 @@ Open the address printed by MkDocs, normally `http://127.0.0.1:8000/`.
 
 ## Important status note
 
-Several color findings intentionally contain `TBD` or illustrative values.
-Replace them after comparing the original CSS, remediated CSS, and computed
-foreground/background combinations on representative generated pages.
-
+Verified color values are based on the supplied original and remediated CSS
+and representative generated pages. Open findings and untested checklist
+requirements remain explicitly identified; the site does not make a blanket
+conformance claim.

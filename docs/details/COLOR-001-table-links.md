@@ -48,17 +48,17 @@ The remediated stylesheet also assigns `#000066` to links inside the TOC box.
 
 | Treatment | Foreground | Background | Ratio | AA | AAA |
 |---|---:|---:|---:|---|---|
-| Original normal | `#428BCA` | White `#FFFFFF` | 3.63:1 | Fail | Fail |
-| Original normal | `#428BCA` | Striped row `#F7F7F7` | 3.39:1 | Fail | Fail |
-| Original normal | `#428BCA` | Original publication box `#FFFF00` | 3.38:1 | Fail | Fail |
-| Original normal | `#428BCA` | Original TOC box `#FFEB7E` | 3.02:1 | Fail | Fail |
-| Original hover | `#2A6496` | White `#FFFFFF` | 6.25:1 | Pass | Fail |
-| Original hover | `#2A6496` | Striped row `#F7F7F7` | 5.83:1 | Pass | Fail |
-| AA candidate | `#346D9F` | Worst original context, `#FFEB7E` | 4.55:1 | Pass | Fail |
-| Implemented normal | `#0000AA` | White `#FFFFFF` | 13.29:1 | Pass | Pass |
-| Implemented normal | `#0000AA` | Striped row `#F7F7F7` | 12.40:1 | Pass | Pass |
-| Implemented normal | `#0000AA` | Remediated box `#FFFFCC` | 12.93:1 | Pass | Pass |
-| Implemented hover/focus | `#000066` | Remediated box `#FFFFCC` | 17.14:1 | Pass | Pass |
+| Original normal | <span class="color-swatch" style="--swatch: #428BCA" aria-hidden="true"></span>`#428BCA` | White <span class="color-swatch" style="--swatch: #FFFFFF" aria-hidden="true"></span>`#FFFFFF` | 3.63:1 | Fail | Fail |
+| Original normal | <span class="color-swatch" style="--swatch: #428BCA" aria-hidden="true"></span>`#428BCA` | Striped row <span class="color-swatch" style="--swatch: #F7F7F7" aria-hidden="true"></span>`#F7F7F7` | 3.39:1 | Fail | Fail |
+| Original normal | <span class="color-swatch" style="--swatch: #428BCA" aria-hidden="true"></span>`#428BCA` | Original publication box <span class="color-swatch" style="--swatch: #FFFF00" aria-hidden="true"></span>`#FFFF00` | 3.38:1 | Fail | Fail |
+| Original normal | <span class="color-swatch" style="--swatch: #428BCA" aria-hidden="true"></span>`#428BCA` | Original TOC box <span class="color-swatch" style="--swatch: #FFEB7E" aria-hidden="true"></span>`#FFEB7E` | 3.02:1 | Fail | Fail |
+| Original hover | <span class="color-swatch" style="--swatch: #2A6496" aria-hidden="true"></span>`#2A6496` | White <span class="color-swatch" style="--swatch: #FFFFFF" aria-hidden="true"></span>`#FFFFFF` | 6.25:1 | Pass | Fail |
+| Original hover | <span class="color-swatch" style="--swatch: #2A6496" aria-hidden="true"></span>`#2A6496` | Striped row <span class="color-swatch" style="--swatch: #F7F7F7" aria-hidden="true"></span>`#F7F7F7` | 5.83:1 | Pass | Fail |
+| AA candidate | <span class="color-swatch" style="--swatch: #346D9F" aria-hidden="true"></span>`#346D9F` | Worst original context, <span class="color-swatch" style="--swatch: #FFEB7E" aria-hidden="true"></span>`#FFEB7E` | 4.55:1 | Pass | Fail |
+| Implemented normal | <span class="color-swatch" style="--swatch: #0000AA" aria-hidden="true"></span>`#0000AA` | White <span class="color-swatch" style="--swatch: #FFFFFF" aria-hidden="true"></span>`#FFFFFF` | 13.29:1 | Pass | Pass |
+| Implemented normal | <span class="color-swatch" style="--swatch: #0000AA" aria-hidden="true"></span>`#0000AA` | Striped row <span class="color-swatch" style="--swatch: #F7F7F7" aria-hidden="true"></span>`#F7F7F7` | 12.40:1 | Pass | Pass |
+| Implemented normal | <span class="color-swatch" style="--swatch: #0000AA" aria-hidden="true"></span>`#0000AA` | Remediated box <span class="color-swatch" style="--swatch: #FFFFCC" aria-hidden="true"></span>`#FFFFCC` | 12.93:1 | Pass | Pass |
+| Implemented hover/focus | <span class="color-swatch" style="--swatch: #000066" aria-hidden="true"></span>`#000066` | Remediated box <span class="color-swatch" style="--swatch: #FFFFCC" aria-hidden="true"></span>`#FFFFCC` | 17.14:1 | Pass | Pass |
 
 The AA candidate is a reproducible proportional darkening of the original RGB
 value that passes the supplied original backgrounds without rounding. WCAG does
@@ -71,4 +71,3 @@ design choice rather than the only valid choice.
    every normal context.
 2. Links remain identifiable without relying solely on color where required.
 3. Template CSS supplies the colors without postprocessing generated HTML.
-

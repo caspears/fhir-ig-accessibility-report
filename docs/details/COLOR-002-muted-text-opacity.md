@@ -32,12 +32,12 @@ The link correction also depends on the `project.css` transition from
 
 | Treatment | Base foreground | Opacity | Background | Effective foreground | Ratio | AA | AAA |
 |---|---:|---:|---:|---:|---:|---|---|
-| Original | `#333333` | 0.50 | White `#FFFFFF` | `#999999` | 2.85:1 | Fail | Fail |
-| Original | `#333333` | 0.50 | Stripe `#F7F7F7` | `#959595` | 2.80:1 | Fail | Fail |
-| Practical AA candidate | `#333333` | 0.69 | White `#FFFFFF` | `#727272` | 4.81:1 | Pass | Fail |
-| Practical AA candidate | `#333333` | 0.69 | Stripe `#F7F7F7` | `#707070` | 4.62:1 | Pass | Fail |
-| Implemented | `#333333` | 0.87 | White `#FFFFFF` | `#4E4E4E` | 8.32:1 | Pass | Pass |
-| Implemented | `#333333` | 0.87 | Stripe `#F7F7F7` | `#4C4C4C` | 8.02:1 | Pass | Pass |
+| Original | <span class="color-swatch" style="--swatch: #333333" aria-hidden="true"></span>`#333333` | 0.50 | White <span class="color-swatch" style="--swatch: #FFFFFF" aria-hidden="true"></span>`#FFFFFF` | <span class="color-swatch" style="--swatch: #999999" aria-hidden="true"></span>`#999999` | 2.85:1 | Fail | Fail |
+| Original | <span class="color-swatch" style="--swatch: #333333" aria-hidden="true"></span>`#333333` | 0.50 | Stripe <span class="color-swatch" style="--swatch: #F7F7F7" aria-hidden="true"></span>`#F7F7F7` | <span class="color-swatch" style="--swatch: #959595" aria-hidden="true"></span>`#959595` | 2.80:1 | Fail | Fail |
+| Practical AA candidate | <span class="color-swatch" style="--swatch: #333333" aria-hidden="true"></span>`#333333` | 0.69 | White <span class="color-swatch" style="--swatch: #FFFFFF" aria-hidden="true"></span>`#FFFFFF` | <span class="color-swatch" style="--swatch: #727272" aria-hidden="true"></span>`#727272` | 4.81:1 | Pass | Fail |
+| Practical AA candidate | <span class="color-swatch" style="--swatch: #333333" aria-hidden="true"></span>`#333333` | 0.69 | Stripe <span class="color-swatch" style="--swatch: #F7F7F7" aria-hidden="true"></span>`#F7F7F7` | <span class="color-swatch" style="--swatch: #707070" aria-hidden="true"></span>`#707070` | 4.62:1 | Pass | Fail |
+| Implemented | <span class="color-swatch" style="--swatch: #333333" aria-hidden="true"></span>`#333333` | 0.87 | White <span class="color-swatch" style="--swatch: #FFFFFF" aria-hidden="true"></span>`#FFFFFF` | <span class="color-swatch" style="--swatch: #4E4E4E" aria-hidden="true"></span>`#4E4E4E` | 8.32:1 | Pass | Pass |
+| Implemented | <span class="color-swatch" style="--swatch: #333333" aria-hidden="true"></span>`#333333` | 0.87 | Stripe <span class="color-swatch" style="--swatch: #F7F7F7" aria-hidden="true"></span>`#F7F7F7` | <span class="color-swatch" style="--swatch: #4C4C4C" aria-hidden="true"></span>`#4C4C4C` | 8.02:1 | Pass | Pass |
 
 The mathematical transition begins passing at approximately 0.682 for the
 supplied colors after 8-bit compositing. `0.69` is reported as the practical AA
@@ -47,10 +47,10 @@ candidate to avoid depending on a rounding boundary.
 
 | Treatment | Base foreground | Opacity | Worst supplied ratio | Result |
 |---|---:|---:|---:|---|
-| Original | `#428BCA` | 0.50 | 1.76:1 | Fails AA |
-| Original color at full opacity | `#428BCA` | 1.00 | 3.39:1 | Still fails AA |
-| Example AA treatment | `#0000AA` | 0.60 | 4.71:1 | Passes AA |
-| Implemented | `#0000AA` | 0.87 | 10.17:1 | Passes AAA |
+| Original | <span class="color-swatch" style="--swatch: #428BCA" aria-hidden="true"></span>`#428BCA` | 0.50 | 1.76:1 | Fails AA |
+| Original color at full opacity | <span class="color-swatch" style="--swatch: #428BCA" aria-hidden="true"></span>`#428BCA` | 1.00 | 3.39:1 | Still fails AA |
+| Example AA treatment | <span class="color-swatch" style="--swatch: #0000AA" aria-hidden="true"></span>`#0000AA` | 0.60 | 4.71:1 | Passes AA |
+| Implemented | <span class="color-swatch" style="--swatch: #0000AA" aria-hidden="true"></span>`#0000AA` | 0.87 | 10.17:1 | Passes AAA |
 
 ## Acceptance criteria
 
@@ -58,4 +58,3 @@ candidate to avoid depending on a rounding boundary.
 2. Parent opacity and transparent ancestors are included in the calculation.
 3. Links are tested using their computed link color, not the body text color.
 4. Publisher output is corrected upstream rather than only after generation.
-

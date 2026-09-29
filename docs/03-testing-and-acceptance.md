@@ -14,6 +14,9 @@
 | Images | Decorative, functional, simple, and complex-image review |
 | Regression | Representative generated pages and automated tests |
 
+Use the [HHS checklist traceability page](04-hhs-checklist-traceability.md) to
+record requirements that are not represented by a remediation finding.
+
 ## Representative page families
 
 - Home/content page
@@ -35,4 +38,3 @@ A change is complete when:
    rounding.
 4. Automated regression coverage exists where practical.
 5. Historical-publication remediation remains available and documented.
-

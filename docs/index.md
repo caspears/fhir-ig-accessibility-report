@@ -1,8 +1,8 @@
 # FHIR IG Section 508 Accessibility Remediation
 
-> **Sample document:** Values and selectors marked TBD or illustrative must be
-> replaced after analysis of the original CSS, modified CSS, and representative
-> generated HTML.
+> **Working remediation record:** Verified values are based on the supplied
+> original and modified CSS plus representative generated HTML. Open items are
+> identified explicitly and are not counted as conformant.
 
 ## Purpose
 
@@ -20,6 +20,7 @@ they directly affect an accessibility requirement.
 - [508 quick reference](01-quick-reference.md)
 - [Color and contrast method](02-color-contrast-method.md)
 - [Testing and acceptance](03-testing-and-acceptance.md)
+- [HHS checklist traceability and remaining work](04-hhs-checklist-traceability.md)
 
 ## Scope
 
@@ -38,4 +39,3 @@ This report identifies whether a particular presentation meets an applicable
 WCAG success criterion. It does not claim that the entire site conforms to
 WCAG Level AAA merely because selected text colors meet the enhanced contrast
 criterion.
-
