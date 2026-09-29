@@ -73,14 +73,13 @@ treatments. That stronger color target does not create a site-wide AAA claim.
 
 ## Suggested completion sequence
 
-1. Close or formally accept COLOR-004.
-2. Run a representative page-family matrix against every HHS ID.
-3. Add semantic table, zoom/reflow, focus, language, title, links, parsing, and
+1. Run a representative page-family matrix against every HHS ID.
+2. Add semantic table, zoom/reflow, focus, language, title, links, parsing, and
    screen-reader results.
-4. Mark genuinely absent features N/A with the evidence used to make that
+3. Mark genuinely absent features N/A with the evidence used to make that
    determination.
-5. Separate output conformance from IG Publisher authoring-tool conformance.
-6. Publish a dated snapshot with tool versions, open findings, and review sign-off.
+4. Separate output conformance from IG Publisher authoring-tool conformance.
+5. Publish a dated snapshot with tool versions, open findings, and review sign-off.
 
 ## References
 

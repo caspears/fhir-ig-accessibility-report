@@ -43,8 +43,11 @@ Verification** means a remediation exists but testing or coverage is incomplete.
 
 | Area | Required action | Status |
 |---|---|---|
-| Generated gray syntax comments | Replace `gray` with an AA-compliant treatment and test all syntax views | <span class="result result-fail">Open failure</span> |
 | Duplicate IDs and parsing | Run validation, determine affected templates, and remediate safely | <span class="result result-untested">Not tested</span> |
+
+The previously reported gray syntax-comment issue is closed: the markup occurs
+inside a commented-out JSON/XML template block and is not present in the
+rendered DOM. It must be retested if that template is enabled later.
 
 ## Not yet tested systematically
 
