@@ -41,7 +41,6 @@ the page unnecessarily repetitive.
 | QA/package decoration | Flame, package, dependency-tree connectors | `alt=""` when the package name and status letter/text convey the information |
 | Decorative template graphic | `header_top.png` | `alt=""` or CSS background |
 | Linked logo or brand image | CDC or organizational logo | Name the link's destination when the image is the link's only content; otherwise use `alt=""` beside equivalent brand text |
-| Footer image containing organization text | `footer.png` | `alt="National Center for Emerging and Zoonotic Infectious Diseases"` |
 | Simple authored image | Screenshot or illustration conveying one idea | Concise alternative conveying the same purpose or information |
 | Unique authored diagram | Process or architecture diagram | Meaningful short alternative plus an adjacent detailed description |
 
@@ -76,10 +75,6 @@ that button.
 <button type="button" aria-label="Choose table fields">
   <img src="tree-filter.png" alt="" aria-hidden="true">
 </button>
-
-<!-- Informative image containing otherwise unavailable text -->
-<img src="footer.png"
-     alt="National Center for Emerging and Zoonotic Infectious Diseases">
 ```
 
 ## Acceptance criteria
