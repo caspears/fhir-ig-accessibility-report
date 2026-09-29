@@ -40,5 +40,9 @@ nav:
       - Generated Image Alternatives: details/IMG-001-image-alternatives.md
   - Keyboard Operation:
       - Generated Table Controls: details/KBD-001-table-controls.md
+      - Alternative Accessible Table Views: 05-alternative-table-views.md
+  - Assessment:
+      - Accessibility Checklist: 06-accessibility-checklist.md
+      - Before and After Results: 07-before-after-results.md
   - Testing and Acceptance: 03-testing-and-acceptance.md
   - Checklist Coverage and Remaining Work: 04-hhs-checklist-traceability.md

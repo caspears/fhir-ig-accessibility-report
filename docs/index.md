@@ -21,6 +21,9 @@ they directly affect an accessibility requirement.
 - [Color and contrast method](02-color-contrast-method.md)
 - [Testing and acceptance](03-testing-and-acceptance.md)
 - [HHS checklist traceability and remaining work](04-hhs-checklist-traceability.md)
+- [Alternative accessible table views](05-alternative-table-views.md)
+- [Accessibility checklist](06-accessibility-checklist.md)
+- [Before and after results](07-before-after-results.md)
 
 ## Scope
 

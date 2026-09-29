@@ -2,6 +2,10 @@
 
 [Back to Start Here](index.md) · [Quick Reference](01-quick-reference.md)
 
+See also the [project checklist](06-accessibility-checklist.md), the complete
+[before-and-after results](07-before-after-results.md), and the proposed
+[alternative accessible table views](05-alternative-table-views.md).
+
 ## Purpose and limits
 
 This page maps the supplied **HHS 508 Web Applications Checklist (03/2020)**
@@ -38,7 +42,9 @@ treatments. That stronger color target does not create a site-wide AAA claim.
    N/A, or Not Tested for each applicable HHS ID and representative page family.
 2. **Tables need semantic testing, not only keyboard fixes.** Generated profile
    tables are complex and may require explicit header associations, captions,
-   and accessible names.
+   and accessible names. A simplified table or text-outline view can help, but
+   only if it is equivalent, current, readily discoverable, and does not leave
+   the original view free to interfere with access.
 3. **Dynamic state must be verified.** Tree controls and filter popups need
    correct name, role, expanded/checked state, focus movement, and announcement.
 4. **Reflow and zoom need separate evidence.** Horizontal scrolling in dense

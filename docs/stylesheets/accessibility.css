@@ -58,3 +58,29 @@
   border: 1px solid #333;
   border-radius: 0.15rem;
 }
+
+/* Results always include text; color is supplementary. */
+.result {
+  display: block;
+  min-width: 7.5rem;
+  padding: 0.3rem 0.45rem;
+  border: 1px solid currentColor;
+  border-radius: 0.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.result-pass { color: #1e4620; background: #e6f4ea; }
+.result-fail { color: #7a1c1c; background: #fde7e9; }
+.result-partial { color: #664d03; background: #fff3cd; }
+.result-untested { color: #343a40; background: #eef0f2; }
+.result-na { color: #3f3f46; background: #f4f4f5; }
+
+.status-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.status-key .result { display: inline-block; }

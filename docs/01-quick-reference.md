@@ -20,7 +20,7 @@ alternating table-row backgrounds.
 |---|---|---|---|---|---|---|
 | COLOR-001 | Profile-table and site links | White; `#F7F7F7` rows; publication and TOC boxes; interaction states | A proportional-darkening candidate is `#346D9F`; other AA solutions are possible | `#0000AA`; hover/focus `#000066` | Verified for supplied contexts | [Table links](details/COLOR-001-table-links.md) |
 | COLOR-002 | Muted table text and `opacity: 0.5` | White and `#F7F7F7` rows | For inherited `#333333` text, use at least `0.69`; muted links also require a darker link color | `opacity: 0.87` plus remediated link colors | Verified for supplied contexts | [Muted text and opacity](details/COLOR-002-muted-text-opacity.md) |
-| COLOR-003 | Must Support badge | White text on the badge background | Existing `#D50000` already meets AA | `#B60000` meets AAA | Verified | [Must Support colors](details/COLOR-003-must-support-colors.md) |
+| COLOR-003 | Must Support and QA status badges | White text on opaque red and green backgrounds | Existing `#D50000` and `#008000` meet AA | `#B60000` and `#006600` meet AAA | Verified | [Must Support and QA status colors](details/COLOR-003-must-support-colors.md) |
 | COLOR-004 | Generated syntax colors | White and `#F7F7F7` | Replace `gray` with an AA-compliant treatment | Not yet implemented | Open AA gap | [Generated syntax colors](details/COLOR-004-generated-syntax-colors.md) |
 
 ## Structure, images, and interaction
