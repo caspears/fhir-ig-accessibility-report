@@ -1,51 +1,74 @@
-# COLOR-001: Profile-Table Links
+# COLOR-001: Profile-Table and Site Links
 
 [Back to Quick Reference](../01-quick-reference.md)
 
 **Category:** Color and contrast  
 **WCAG:** 1.4.3 Contrast (Minimum); 1.4.6 Contrast (Enhanced)  
 **Content:** Regular text  
-**Primary owner:** IG Publisher CSS  
-**Status:** Sample—source analysis required
+**Primary owner:** IG template CSS  
+**Status:** Verified for the supplied representative contexts
 
 ## Problem
 
-Blue links appear on more than one effective background in generated profile
-tables, including white and alternating light-gray rows. The same link color
-must be evaluated separately against each background and in each styled
-interaction state.
+The original normal link color did not reach 4.5:1 on any supplied normal
+background. The lowest observed ratio was 3.02:1 in the original
+table-of-contents treatment. The original hover color met AA but not AAA.
 
 ## Source transition
 
+The transition is present in `project.css`:
+
 ```diff
- .profile-table a {
--  color: ORIGINAL_LINK_COLOR;
-+  color: IMPLEMENTED_LINK_COLOR;
- }
+---link-color: #428bca;
++++link-color: #0000aa;
+
+---link-hover-color: #2a6496;
++++link-hover-color: #000066;
+
+---publish-box-bg-color: yellow;
++++publish-box-bg-color: #ffffcc;
+
+---toc-box-bg-color: #ffeb7e;
++++toc-box-bg-color: #ffffcc;
 ```
+
+The remediated stylesheet also assigns `#000066` to links inside the TOC box.
+
+## Color preview
+
+| Treatment | Preview and value |
+|---|---|
+| Original normal link | <span class="color-swatch" style="--swatch: #428BCA" aria-hidden="true"></span>`#428BCA` |
+| AA candidate | <span class="color-swatch" style="--swatch: #346D9F" aria-hidden="true"></span>`#346D9F` |
+| Implemented normal link | <span class="color-swatch" style="--swatch: #0000AA" aria-hidden="true"></span>`#0000AA` |
+| Original hover link | <span class="color-swatch" style="--swatch: #2A6496" aria-hidden="true"></span>`#2A6496` |
+| Implemented hover/focus link | <span class="color-swatch" style="--swatch: #000066" aria-hidden="true"></span>`#000066` |
 
 ## Contrast results
 
-| Treatment | State | Foreground | Background | Ratio | AA | AAA |
-|---|---|---:|---:|---:|---|---|
-| Original | Normal, white row | TBD | TBD | TBD | TBD | TBD |
-| Original | Normal, striped row | TBD | TBD | TBD | TBD | TBD |
-| Original | Hover/focus, white row | TBD | TBD | TBD | TBD | TBD |
-| Original | Hover/focus, striped row | TBD | TBD | TBD | TBD | TBD |
-| Minimum AA | Worst identified context | TBD | TBD | TBD | Pass | Not necessarily |
-| Implemented | Worst identified context | TBD | TBD | TBD | Pass | Target: Pass |
+| Treatment | Foreground | Background | Ratio | AA | AAA |
+|---|---:|---:|---:|---|---|
+| Original normal | `#428BCA` | White `#FFFFFF` | 3.63:1 | Fail | Fail |
+| Original normal | `#428BCA` | Striped row `#F7F7F7` | 3.39:1 | Fail | Fail |
+| Original normal | `#428BCA` | Original publication box `#FFFF00` | 3.38:1 | Fail | Fail |
+| Original normal | `#428BCA` | Original TOC box `#FFEB7E` | 3.02:1 | Fail | Fail |
+| Original hover | `#2A6496` | White `#FFFFFF` | 6.25:1 | Pass | Fail |
+| Original hover | `#2A6496` | Striped row `#F7F7F7` | 5.83:1 | Pass | Fail |
+| AA candidate | `#346D9F` | Worst original context, `#FFEB7E` | 4.55:1 | Pass | Fail |
+| Implemented normal | `#0000AA` | White `#FFFFFF` | 13.29:1 | Pass | Pass |
+| Implemented normal | `#0000AA` | Striped row `#F7F7F7` | 12.40:1 | Pass | Pass |
+| Implemented normal | `#0000AA` | Remediated box `#FFFFCC` | 12.93:1 | Pass | Pass |
+| Implemented hover/focus | `#000066` | Remediated box `#FFFFCC` | 17.14:1 | Pass | Pass |
 
-## Decision
-
-Select one link color only if it passes against every normal table background.
-If that is inconsistent with the intended design, use context-specific rules.
-Do not use color alone to distinguish links where the surrounding text would
-otherwise make them indistinguishable.
+The AA candidate is a reproducible proportional darkening of the original RGB
+value that passes the supplied original backgrounds without rounding. WCAG does
+not prescribe a unique replacement color, so it is an example of a minimal-AA
+design choice rather than the only valid choice.
 
 ## Acceptance criteria
 
-1. Normal link text meets the selected contrast target on white and striped rows.
-2. Hover, focus, active, and visited states meet the applicable target.
-3. Links remain identifiable without relying solely on color where required.
-4. Newly generated pages do not need color postprocessing.
+1. Normal and interaction-state links meet the selected contrast target in
+   every normal context.
+2. Links remain identifiable without relying solely on color where required.
+3. Template CSS supplies the colors without postprocessing generated HTML.
 

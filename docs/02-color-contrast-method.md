@@ -55,3 +55,16 @@ effective colors on white and striped rows. Screenshot pixels are useful for
 finding contexts but are not the authoritative source for calculation; computed
 CSS values are used.
 
+## Source material reviewed
+
+The verified results use the supplied CSS bundles and representative pages:
+
+- CDC `project.css`, `bootstrap-fhir.css`, `fhir.css`, and
+  `StructureDefinition-ach-daily-encounter.html`
+- HL7 `project.css`, `bootstrap-fhir.css`, `fhir.css`, and
+  `StructureDefinition-davinci-pct-aeob.html`
+- [Da Vinci PCT publication history](https://hl7.org/fhir/us/davinci-pct/history.html)
+
+The calculations are based on the supplied representative files. The history
+page identifies stable comparison locations; it does not imply that every
+historical page was exhaustively audited.

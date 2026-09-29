@@ -1,41 +1,37 @@
-# COLOR-003: Must Support and Status Colors
+# COLOR-003: Must Support Badge
 
 [Back to Quick Reference](../01-quick-reference.md)
 
 **Category:** Color and contrast  
-**WCAG:** 1.4.3, 1.4.6, and 1.4.11 as applicable  
-**Primary owner:** IG Publisher/template CSS  
-**Status:** Sample based on known remediation values
+**WCAG:** 1.4.3 Contrast (Minimum); 1.4.6 Contrast (Enhanced)  
+**Primary owner:** IG Publisher  
+**Status:** Verified in the supplied representative profile pages
 
-## Known color transitions
+## Source transition
+
+The supplied HL7 page contains white `S` text on `#D50000`. The remediated CDC
+page contains white `S` text on `#B60000`:
 
 ```diff
--color: green;
-+color: #006600;
-
--color: red;
-+color: #B60000;
+-color: white; background-color: #D50000
++color: white; background-color: #B60000
 ```
 
-The actual report will identify the exact selectors and whether each color is
-used for regular text, a badge background, an icon, or another non-text object.
+## Color preview and results
 
-## Illustrative white-background comparison
-
-| Use | Treatment | Color | Ratio on white | AA regular text | AAA regular text |
+| Treatment | Badge background | Text | Ratio | AA | AAA |
 |---|---|---:|---:|---|---|
-| Green text | Original | `#008000` | 5.14:1 | Pass | Fail |
-| Green text | Implemented | `#006600` | 7.24:1 | Pass | Pass |
-| Red text | Original | `#FF0000` | 4.00:1 | Fail | Fail |
-| Red text | Illustrative minimum AA | `#EE0000` | 4.53:1 | Pass | Fail |
-| Red text | Implemented | `#B60000` | 7.03:1 | Pass | Pass |
+| Original | <span class="color-swatch" style="--swatch: #D50000" aria-hidden="true"></span>`#D50000` | White `#FFFFFF` | 5.48:1 | Pass | Fail |
+| Implemented | <span class="color-swatch" style="--swatch: #B60000" aria-hidden="true"></span>`#B60000` | White `#FFFFFF` | 7.03:1 | Pass | Pass |
 
-These values do not establish compliance on striped rows or colored badges.
-Those combinations will be added after computed backgrounds are resolved.
+No color change was required for AA: the original badge already exceeded
+4.5:1. The darker treatment was required only for the selected AAA regular-text
+target. The alternating table row does not affect this calculation because the
+glyph is rendered against the badge's opaque background.
 
 ## Color-independent meaning
 
-Must Support and status information must not be communicated by color alone.
-Visible text, symbols, labels, or programmatic names must continue to express
-the status when colors cannot be distinguished.
+The visible `S`, its tooltip or accessible description, and surrounding table
+semantics must continue to convey Must Support status without relying on red
+alone.
 
